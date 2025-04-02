@@ -2,29 +2,29 @@ package main.java;
 import java.util.Scanner;
 
 public class App {
-        //Comentário
 
-    public static void funcao_teste (){
-        //Biblioteca para entrada de dados
-        Scanner ler = new Scanner(System.in); 
 
-        //variável local a
-        String v2;
-        int v1;
+        public static void main(String[] args) {
+    
+           
+            Corpo_Humano c1 = new Corpo_Humano(70, 0.07f);
+    
+           
+            System.out.println("Peso: " + c1.getPeso() + " kg");
+            System.out.println("Altura: " + c1.getAltura() + " m³");
+            System.out.println("Massa: " + c1.getMassa() + " kg/m³");
+    
+           
+            c1.setMassa(75);  
+            c1.setAltura(1.75f);  
+    
+          c1.setPeso(70);
+            System.out.println("\nApós alteração:");
+            System.out.println("Peso: " + c1.getPeso() + " kg");
+            System.out.println("Altura: " + c1.getAltura() + " m³");
+            System.out.println("Massa: " + c1.getMassa() + " kg/m³");
+            System.out.println("IMC: " + c1.calcularIMC() + " ");
 
-        System.out.println("Comando de Saida de Dados");
-        
-        System.out.printf("Informe uma palavra: ");
-        v2 = ler.next();
-
-        System.out.printf("Informe um número: ");
-        v1 = ler.nextInt();
-
-        System.out.printf(v2+" "+v1);
+        }
     }
-    public static void main(String[] args) throws Exception {
-        funcao_teste();
-
-
-    }
-}
+    //
